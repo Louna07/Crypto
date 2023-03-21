@@ -7,3 +7,4 @@ clef = liste_a
 random.shuffle(liste_a)
 #fonction creation de la clef par mélange aleatoire de la liste alphabet
 print("clef:",liste_a)
+msg_crypt = "BONJOUR LA CLEF EST SOUS LE TAPIS"
