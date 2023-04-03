@@ -1,32 +1,7 @@
 # Crypto
 
-#ici on a chiffrer un message par la technique de substituion mono-alphabétique.MARIE-MICHELE.1
-import random
-#definition de l'alphabet
-alphabet = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-print("alphabet original:",alphabet)
-#cle de substitution 
-clef = list(alphabet)
-random.shuffle(clef)
-print("nouvel alphabet:",clef)
-message = input("entrez votre message :")
-
-#definir une fonction qui va chiffrer le message
-def chiffre_message(message):
-    #initialisation d'une variable qui contient le message chiffré 
-    message_chiffre = ""
-    #on chiffre chaque caractere du message, on vérifie que chaque carctere est dans l'alphabaet.
-    #on determine l'indice de ce caractere dans la liste alphabet grace a index()
-    #la fonction renvoie la variable message chiffre.
-    for caractere in message:
-        if caractere in alphabet:
-            indice = alphabet.index(caractere)
-            caractere_chiffre = clef[indice]
-            message_chiffre += caractere_chiffre
-        else:
-            message_chiffre += caractere
-    return message_chiffre
-
-message_chiffre = chiffre_message(message)
-print("message original:",message)
-print("message chiffré:",message_chiffre)
+Création de 8 fonctions de crypto-analyse, le but est de chiffrer et déchiffrer des messages grâce à différentes techniques : tels que la méthode césar,le chiffre de vigenère,la substitution mono-alphabétique et la scytale. 
+La méthode césar consiste à décaler les 3 lettres de rang,vers la droite dans l'alphabet.
+Le chiffre de vigenère consiste à chiffrer par substitution polyalphabétique, c'est à dire qu'une lettre peut être rempacer par plusieur lettre. 
+la substitution mono-alphabétique consiste à chiffrer par substitution mono-alphabétique, c'est à dire que l'on remplace une lettre par une autre grâce à une clef definie au préalable. 
+La scytale est un objet ancien qui encode un message par technique de transposition. 
