@@ -1,5 +1,8 @@
 #ici on a chiffrer un message par le technique de substituion mono-alphabétique.MARIE-MICHELE1
 import random
+import tkinter as tk
+HAUTEUR = 600
+LARGEUR = 600
 #definition de l'alphabet
 alphabet = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 print("alphabet original:",alphabet)
@@ -32,3 +35,8 @@ print("message chiffré:",message_chiffre)
 #décryptage d'un message avec clef connue. 
 clef = list("MNLAVRBOZJKYDSWHEFCXTUPQGI")
 
+racine =tk.Tk()
+racine.title("")
+canvas=tk.Canvas(racine, width=LARGEUR, height=HAUTEUR)
+
+racine.mainloop()
