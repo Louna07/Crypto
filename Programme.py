@@ -11,9 +11,11 @@ message = input("entrez votre message :")
 
 #definir une fonction qui va chiffrer le message
 def chiffre_message(message):
-    #initialisation du message chiffré
+    #initialisation d'une variable qui contient le message chiffré 
     message_chiffre = ""
-    #on chiffre chaque caractere du message
+    #on chiffre chaque caractere du message, on vérifie que chaque carctere est dans l'alphabaet.
+    #on determine l'indice de ce caractere dans la liste alphabet grace a index()
+    #la fonction renvoie la variable message chiffre.
     for caractere in message:
         if caractere in alphabet:
             indice = alphabet.index(caractere)
@@ -26,3 +28,7 @@ def chiffre_message(message):
 message_chiffre = chiffre_message(message)
 print("message original:",message)
 print("message chiffré:",message_chiffre)
+
+#décryptage d'un message avec clef connue. 
+clef = list("MNLAVRBOZJKYDSWHEFCXTUPQGI")
+
