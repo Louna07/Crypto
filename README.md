@@ -14,18 +14,18 @@ Le chiffre de vigenère consiste à chiffrer par substitution polyalphabétique,
 la substitution mono-alphabétique consiste à chiffrer par substitution mono-alphabétique, c'est à dire que l'on remplace une lettre par une autre grâce à une clef definie au préalable. 
 La scytale est un objet ancien qui encode un message par technique de transposition. 
 
-Implémentation des algorithmes de chiffrement:
+##Implémentation des algorithmes de chiffrement:
 a. Code de César
 b. Chiffre de Vigenère
 c. Scytale
 d. Substitution monoalphabétique générale
 
-Implémentation des attaques cryptanalytiques:
+##Implémentation des attaques cryptanalytiques:
 a. Force brute pour chaque algorithme
 b. Analyse de fréquence pour chaque algorithme
 c. Cryptanalyse de Vigenère
 
-Implémentation de la machine de chiffrement Enigma
+##Implémentation de la machine de chiffrement Enigma
 Interface utilisateur:
 a. Menu principal pour choisir entre les différents algorithmes
 b. Option pour entrer un fichier .txt et chiffrer le texte
