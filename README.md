@@ -1,8 +1,11 @@
 # Cryptanalyse de chiffrement
 
 22104055  Bastien Combes
+
 22103840	Marie-Michèle	Mawoussi
+
 22200395	Tessa	CARRIL
+
 22206815	louna	BAGOT
 
 Création de 8 fonctions de crypto-analyse, le but est de chiffrer et déchiffrer des messages grâce à différentes techniques : tels que la méthode césar,le chiffre de vigenère,la substitution mono-alphabétique et la scytale. 
