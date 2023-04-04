@@ -31,3 +31,78 @@ def chiffré_message(message_en_clair):
 message_chiffré = chiffré_message(message_en_clair)
 print("message original:",message_en_clair)
 print("message chiffré:",message_chiffré)
+
+#CodeCesarTessaCryptage
+def cryptage(message, cle) : 
+    message_resultat = ""
+    #Si la lettre est en majuscule on utilise la méthode ord() ce qui donne la table des lettres ASCII
+    for i in range(len(message)):
+        lettre = message[i]
+        if 65 <= ord(lettre) <= 90 :
+            lettre_chiffree = chr(65 + (ord(lettre) - 65 + cle)%26) #%26 permet de se balader dans l'alphabet, -65 permet de donner la position de la lettre
+                                                     #cle permet le décalage de la lettre, +65 permet de trouver le décalage de la lettre dans la table
+    #Si la lettre est en minuscule
+        elif 97 <= ord(lettre) <= 122 :
+            lettre_chiffree = chr(97 + (ord(lettre) - 97 + cle)% 26)
+        else :
+            lettre_chiffree = lettre
+        message_resultat += lettre_chiffree
+    return message_resultat
+
+message = "Salut, moi c'est Tessa"
+cle = 1
+message_resultat = cryptage(message, cle)
+print("Message chiffré:", message_resultat)
+
+#CodeCesarTessaDecryptage
+def decrypt_cesar(messagecode, cle):
+    message = ""
+    for lettre in messagecode:
+        if 65 <= ord(lettre) <= 90:
+            # Décale la lettre en fonction de la clé de chiffrement
+            message += chr(65 + (ord(lettre) - cle - 65) % 26)
+        elif 97 <= ord(lettre) <= 122 :
+            message += chr(97 + (ord(lettre) - cle - 97)% 26)
+        
+        else:
+            message += lettre
+    return message
+
+messagecode = "Cpotpjs, kf n'bqqfmmf Ufttb."
+cle = 1
+message = decrypt_cesar(messagecode, cle)
+print(message)
+
+#CommencementInterphaceTessa
+# L'importation de l’ensemble des éléments du paquet tkinter :
+from tkinter import *
+def create():
+    win = Toplevel()
+    
+
+# Création d'une fenêtre avec la classe Tk :
+fenetre = Tk()
+# Ajout d'un titre à la fenêtre principale :
+fenetre.title("Cryptanalyse")
+# Définir les dimensions par défaut la fenêtre principale :
+fenetre.geometry("640x480")
+# Ajout d'un texte dans la fenêtre :
+texte1 = Label (fenetre, text = "Veuillez choisir votre cryptage")
+texte1.pack()
+# Ajout d'un bouton dans la fenêtre :
+bouton_Cesar = Button (fenetre, text = "Code Cesar", command = create)
+bouton_Cesar.pack()
+bouton_Vigenere = Button (fenetre, text = "Chiffre Vigenere", command= create)
+bouton_Vigenere.pack()
+bouton_Scytal = Button (fenetre, text = "Scytal", command = create)
+bouton_Scytal.pack()
+bouton_Submonoalpha = Button (fenetre, text = "Substituion Monoalphabetique", command = create)
+bouton_Submonoalpha.pack()
+
+def create():
+    newfenetre = tk.Toplevel()
+    labelExample = tk.Label(newWindow, text = "New Window")
+    buttonExample = tk.Button(newWindow, text = "New Window button")
+
+# Affichage de la fenêtre créée : 
+fenetre.mainloop()
