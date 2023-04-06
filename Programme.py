@@ -32,6 +32,32 @@ message_chiffré = chiffré_message(message_en_clair)
 print("message original:",message_en_clair)
 print("message chiffré:",message_chiffré)
 
+#décriptage MARIE-MICHELE2 
+alphabet = list(ABCCDEFGHIJQLMNOPQRSTUVWXYZ)
+#définir la clef de substitution 
+clef = list(input("entrez votre clef:"))
+print(clef)
+
+#définir une fonction pour déchiffrer un message 
+def dechiffre_message(message_chiffre) : 
+    message_dechiffré = ""
+    #dechiffrer chaque caractere du message 
+    for caractere_chiffre in message_chiffre: 
+        if caractere_chiffre in clef : 
+            indice = clef.index(caractere_chiffre)
+            caractere_dechiffre = alphabet[indice]
+            message_dechiffre += caractere_dechiffre
+        else:
+            message_dechiffre += caractere_chiffre 
+    return message_dechiffre 
+#à corriger
+
+#exemple d'utilisation 
+message_chiffre = input("entrez le message à dechiffrer : ")
+message_dechiffre = dechiffre_message(message_chiffre)
+print("message chiffré:", message_chiffre)
+print("message déchiffré:",message_dechiffre)
+
 #CodeCesarTessaCryptage
 def cryptage(message, cle) : 
     message_resultat = ""
