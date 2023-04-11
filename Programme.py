@@ -58,6 +58,25 @@ message_dechiffre = dechiffre_message(message_chiffre)
 print("message chiffré:", message_chiffre)
 print("message déchiffré:",message_dechiffre)
 
+def encrypt_scytale(plaintext, key):
+    key = int(key)
+    ciphertext = [''] * key
+    index = 0
+    for letter in plaintext:
+        ciphertext[index] += letter
+        index = (index + 1) % key
+    return ''.join(ciphertext)
+
+# Fonction de déchiffrement de Scytale
+def decrypt_scytale(ciphertext, key):
+    key = int(key)
+    plaintext = [''] * len(ciphertext)
+    index = 0
+    for i in range(len(ciphertext)):
+        plaintext[i] = ciphertext[index]
+        index = (index + 1) % key
+    return ''.join(plaintext)
+
 #CodeCesarTessaCryptage
 def cryptage(message, cle) : 
     message_resultat = ""
