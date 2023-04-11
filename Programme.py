@@ -1,6 +1,6 @@
 #Chiffrement par substitution mono-alphabétique. MARIE-MICHELE1
 import random
-
+import tkinter as tk
 #création de l'alphabet
 liste_a = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 print("alphabet original:",liste_a)
